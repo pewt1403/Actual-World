@@ -8,12 +8,10 @@ def faceDetect():
     detector = dlib.get_frontal_face_detector()
     predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
     HOST = "127.0.0.1"
-    PORT = 7321
+    PORT = 9000
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST,PORT))
-        s.sendall(bytes("wpw",'UTF-8'))
-        #data = s.recv(1024)
         while True:
             _, frame = cap.read()
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #Gray for detection : use less power
@@ -25,9 +23,7 @@ def faceDetect():
                 x2 = face.right()
                 y2 = face.bottom()
                 #cv2.rectangle(frame, (x1,y1), (x2,y2), (0,255,0), 3)
-    
                 landmarks = predictor(gray, face)
-                #print(landmarks)
                 dataOutX = str(landmarks.part(28).x)
                 dataOutY =  str(landmarks.part(28).y)
                 for i in range(29,68):

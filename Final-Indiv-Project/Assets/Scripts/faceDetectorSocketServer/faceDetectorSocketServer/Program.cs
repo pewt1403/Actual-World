@@ -20,7 +20,7 @@ namespace faceDetectorSocketServer
 
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName()); //Name of host running application
             IPAddress ipAddress = ipHostInfo.AddressList[0];
-            IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 7321);
+            IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9000);
 
             //Create TCP Socket
             Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
