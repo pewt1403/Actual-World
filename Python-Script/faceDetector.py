@@ -24,9 +24,10 @@ def faceDetect():
                 y2 = face.bottom()
                 #cv2.rectangle(frame, (x1,y1), (x2,y2), (0,255,0), 3)
                 landmarks = predictor(gray, face)
-                dataOutX = str(landmarks.part(28).x)
-                dataOutY =  str(landmarks.part(28).y)
-                for i in range(29,68):
+                dataOutX = str(landmarks.part(0).x)
+                dataOutY =  str(landmarks.part(0).y)
+                cv2.circle(frame,(0,0), 3, (255,0,0), -1)
+                for i in range(1,68):
 
                     x = landmarks.part(i).x
                     dataOutX += ',' + str(landmarks.part(i).x)
