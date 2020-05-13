@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 1478139886}
   - component: {fileID: 1478139887}
   - component: {fileID: 1478139888}
+  - component: {fileID: 1478139885}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -406,7 +407,8 @@ MonoBehaviour:
   context: {fileID: 226317977}
   umaData: {fileID: 0}
   umaRecipe: {fileID: 0}
-  umaAdditionalRecipes: []
+  umaAdditionalRecipes:
+  - {fileID: 11400000, guid: 920d59ac577b2d9449aa36a4d9e86f10, type: 2}
   umaGenerator: {fileID: 0}
   animationController: {fileID: 0}
   CharacterCreated:
@@ -528,6 +530,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.2, z: 0.3}
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!114 &1478139885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478139880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8488bffa56385674897023983b39c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1478139886
 AudioSource:
   m_ObjectHideFlags: 0
