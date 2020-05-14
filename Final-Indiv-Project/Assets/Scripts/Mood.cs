@@ -177,7 +177,8 @@ public class Mood : MonoBehaviour
                 
             }
 
-            if(headLR >= 1)
+            // Head Tilt Left and Right Controller
+            if (headLR >= 1)
             {
                 expression.headLeft_Right = 1f;
             }
@@ -190,6 +191,7 @@ public class Mood : MonoBehaviour
                 expression.headLeft_Right = headLR;
             }
 
+            // Head Tilt Up and Down Controller
             if(headUD < -15)
             {
                 expression.headUp_Down = 1f;
@@ -238,7 +240,6 @@ public class Mood : MonoBehaviour
             {
                 expression.rightEyeOpen_Close = eyeR;
             }
-
         }
     }
 }
