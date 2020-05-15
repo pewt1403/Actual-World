@@ -6,7 +6,7 @@ import socket
 def faceDetect():
     cap = cv2.VideoCapture(0)
     detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+    predictor = dlib.shape_predictor("landmarks68.dat")
     HOST = "127.0.0.1"
     PORT = 9000
 
@@ -18,10 +18,10 @@ def faceDetect():
 
             faces = detector(gray) # get Rectangle (face coordinate) [(.,.) (.,.)]
             for face in faces:
-                x1 = face.left()
-                y1 = face.top()
-                x2 = face.right()
-                y2 = face.bottom()
+                #x1 = face.left()
+                #y1 = face.top()
+                #x2 = face.right()
+                #y2 = face.bottom()
                 #cv2.rectangle(frame, (x1,y1), (x2,y2), (0,255,0), 3)
                 landmarks = predictor(gray, face)
                 dataOutX = str(landmarks.part(0).x)
