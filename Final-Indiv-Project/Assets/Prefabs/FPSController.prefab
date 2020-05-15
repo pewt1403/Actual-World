@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1510037279324503552}
   - component: {fileID: 1510037279324503557}
   - component: {fileID: 1510037279324503553}
+  - component: {fileID: 4347473421656501515}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -180,6 +181,18 @@ MonoBehaviour:
     type: 2}
   animatorControllerJump: {fileID: 9100000, guid: 54ff599963ec97843ad4d4ddeeb61810,
     type: 2}
+--- !u!114 &4347473421656501515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510037279324503554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8488bffa56385674897023983b39c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1510037279810847696
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510037279810847696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.329, z: 0.136}
+  m_LocalPosition: {x: -19, y: 2.67, z: -38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1510037279811215346}

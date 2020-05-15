@@ -120,6 +120,12 @@ public class Mood : MonoBehaviour
 
     float turnHead = 0f;
     float dimHead = 0.05f;
+    float jawOC = 0f;
+    float headUD = 0f;
+    float mountNarrow = 0f;
+    float headLR = 0f;
+    float eyeR = 0f;
+    float eyeL = 0f;
 
     private void Update()
     {
@@ -128,13 +134,13 @@ public class Mood : MonoBehaviour
         {
             Debug.Log(Math.Sqrt(Math.Pow(faceX[27] - faceX[30],2) + Math.Pow(faceY[27] - faceY[30], 2)));
             //expression.headLeft_Right = turnHead;
-            float headUD = (float) (Math.Sqrt(Math.Pow(faceX[27] - faceX[30], 2) + Math.Pow(faceY[27] - faceY[30], 2)) - 33f);
+            headUD = (float) (Math.Sqrt(Math.Pow(faceX[27] - faceX[30], 2) + Math.Pow(faceY[27] - faceY[30], 2)) - 33f);
             expression.headTiltLeft_Right = (float) ((faceY[0] - faceY[16]) * -0.01);
-            float jawOC = (float)(Math.Sqrt(Math.Pow(faceX[62] - faceX[66], 2) + Math.Pow(faceY[62] - faceY[66], 2)) - 8);
-            float mountNarrow = (float)(Math.Sqrt(Math.Pow(faceX[48] - faceX[54], 2) + Math.Pow(faceY[48] - faceY[54], 2)) - 65) * 5f * 0.01f;
-            float headLR = (float)((Math.Sqrt(Math.Pow(faceX[0] - faceX[28], 2) + Math.Pow(faceY[0] - faceY[28], 2)) - Math.Sqrt(Math.Pow(faceX[16] - faceX[28], 2) + Math.Pow(faceY[16] - faceY[28], 2)))) * 0.01f;
-            float eyeR = (float) (Math.Sqrt(Math.Pow(faceX[44] - faceX[46], 2) + Math.Pow(faceY[44] - faceY[46], 2)) - 7) * 0.33f ;
-            float eyeL = (float) (Math.Sqrt(Math.Pow(faceX[37] - faceX[41], 2) + Math.Pow(faceY[37] - faceY[41], 2)) - 7) * 0.33f;
+            jawOC = (float)(Math.Sqrt(Math.Pow(faceX[62] - faceX[66], 2) + Math.Pow(faceY[62] - faceY[66], 2)) - 8);
+            mountNarrow = (float)(Math.Sqrt(Math.Pow(faceX[48] - faceX[54], 2) + Math.Pow(faceY[48] - faceY[54], 2)) - 65) * 5f * 0.01f;
+            headLR = (float)((Math.Sqrt(Math.Pow(faceX[0] - faceX[28], 2) + Math.Pow(faceY[0] - faceY[28], 2)) - Math.Sqrt(Math.Pow(faceX[16] - faceX[28], 2) + Math.Pow(faceY[16] - faceY[28], 2)))) * 0.01f;
+            eyeR = (float) (Math.Sqrt(Math.Pow(faceX[44] - faceX[46], 2) + Math.Pow(faceY[44] - faceY[46], 2)) - 7) * 0.33f ;
+            eyeL = (float) (Math.Sqrt(Math.Pow(faceX[37] - faceX[41], 2) + Math.Pow(faceY[37] - faceY[41], 2)) - 7) * 0.33f;
             //Debug.Log(mountNarrow);
 
             //Mouth Open
